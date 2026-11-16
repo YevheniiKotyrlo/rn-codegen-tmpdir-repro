@@ -17,5 +17,3 @@ node repro.js
 It exits 1 while the codegen leaves folders in the temporary folder, 0 once it leaves none, and 2 when a step before the check fails.
 
 Expected: the temporary folder is empty after the codegen exits. Seen: one folder per codegen library (`AppSpecsXXXXXX`, `safeareacontextXXXXXX`), each holding a copy of that library's generated code.
-
-The same folders are left in the Mac's `$TMPDIR` by `cd ios && bundle exec pod install` and by every Xcode build of the app.
